@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#main{
+    width: 50%;
+    height: 500px;
+    border: 10px solid black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+    font-size: 30px;
+}
+a{
+    width: 80%;
+    height: 100px;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
