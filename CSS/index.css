@@ -17,7 +17,7 @@ body{
 #main{
     height: 500px;
     width: 80%;
-    background-image: url("../IMAGES/lettersPhoto.jpg");
+    background-image: url("../IMAGES/letters.jpg");
     background-position: center;
     border: 10px solid black;
     display: flex;
@@ -45,6 +45,6 @@ body{
 }
 #name{
     font-size: 70px;
-    color: darkblue;
+    color: black;
     margin: 25px;
 }

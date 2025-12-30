@@ -4,16 +4,17 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
+    /* background-image: url(""); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
     height: 100vh;
     gap: 10px;
-}
-div{
-    font-size: 25px;
-    padding: 2px;
+    /* padding: 20px; */
 }
 #submit{
     width: 300px;
@@ -26,4 +27,87 @@ div{
 #submit:hover{
     background-color: darkblue;
     border: 2px solid darkblue;
+}
+form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+div{
+    font-size: 25px;
+    padding: 2px;
+    width: 220px;
+    height: 150px;
+    color: black;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+input{
+    margin: 0 0 0 10px;
+}
+#topic{
+    margin: 30px 0 60px 0;
+}
+#option1{
+    background-image: url("../IMAGES/animals.png");
+}
+#option2{
+    background-image: url("../IMAGES/plants.png");
+}
+#option3{
+    background-image: url("../IMAGES/colors.png");
+}
+#option4{
+    background-image: url("../IMAGES/countries.png");
+}
+#option5{
+    background-image: url("../IMAGES/regions.png");
+}
+#option6{
+    background-image: url("../IMAGES/villages.jpg");
+}
+#option7{
+    background-image: url("../IMAGES/names.webp");
+}
+#option8{
+    background-image: url("../IMAGES/fruits.png");
+}
+#option9{
+    background-image: url("../IMAGES/vegetables.png");
+}
+#option10{
+    background-image: url("../IMAGES/sports.jpg");
+}
+#option11{
+    background-image: url("../IMAGES/vehicles.jpg");
+}
+#option12{
+    background-image: url("../IMAGES/music.png");
+    font-size: 21px;
+}
+#option13{
+    background-image: url("../IMAGES/languages.jpg");
+}
+#option14{
+    background-image: url("../IMAGES/films.avif");
+}
+#option15{
+    background-image: url("../IMAGES/books.png");
+}
+#option16{
+    background-image: url("../IMAGES/tools.png");
+    background-size: 60%;
+}
+#option17{
+    background-image: url("../IMAGES/elecrtronics.jpg");
+    color: white;
+}
+#option18{
+    background-image: url("../IMAGES/ownCategory.avif");
+    color: white;
 }

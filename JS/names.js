@@ -7,25 +7,28 @@ button.addEventListener("click", ()=>{
     let P1 = player1.value
     let P2 = player2.value
     
-    points.classList.remove("warn")
-    player1.classList.remove("warn")
-    player2.classList.remove("warn")
-    const azRegex = /[^A-Za-zÇçƏəĞğİıÖöŞşÜü]/
+    points.classList.remove("warn", "shakeAnimate")
+    player1.classList.remove("warn", "shakeAnimate")
+    player2.classList.remove("warn", "shakeAnimate")
     
-    if (/\d/.test(P1) || /\d/.test(P2) || azRegex.test(P1) || azRegex.test(P2)){
+    if(P1 == ""){
         let warn_text = document.getElementById("text")
-        player1.classList.add("warn")
-        player2.classList.add("warn")
-        warn_text.innerHTML = "Letters only allowed"
-    } else if (pointValue == "") {
+        player1.classList.add("warn", "shakeAnimate")
+        warn_text.innerHTML = "Inputs cannot be empty!"
+    }else if(P2 == ""){
         let warn_text = document.getElementById("text")
-        points.classList.add("warn")
-        warn_text.innerHTML = "The inputs can't be empty"
-    } else if (pointValue > 10) {
+        player2.classList.add("warn", "shakeAnimate")
+        warn_text.innerHTML = "Inputs cannot be empty!"
+    }else if(pointValue == ""){
         let warn_text = document.getElementById("text")
-        points.classList.add("warn")
-        warn_text.innerHTML = "Point cannot be more than 10"
-    }else {
+        points.classList.add("warn", "shakeAnimate")
+        warn_text.innerHTML = "Inputs cannot be empty!"
+    }else if(pointValue > 10){
+        let warn_text = document.getElementById("text")
+        points.classList.add("warn", "shakeAnimate")
+        warn_text.innerHTML = "Points cannot be more than 10!"
+    }
+    else {
         P1 = P1[0].toUpperCase() + P1.slice(1).toLowerCase();
         P2 = P2[0].toUpperCase() + P2.slice(1).toLowerCase();
         localStorage.setItem("player1", P1)
