@@ -1,5 +1,5 @@
-let player1 = localStorage.getItem("player1")
-let player2 = localStorage.getItem("player2")
+let player1 = localStorage.getItem("player 1")
+let player2 = localStorage.getItem("player 2")
 let a = Number(localStorage.getItem("a"))
 let b = Number(localStorage.getItem("b"))
 let c = Number(localStorage.getItem("c"))
@@ -7,8 +7,8 @@ let writer = document.getElementById("P1")
 let finder = document.getElementById("P2")
 let P1_point = document.getElementById("p1_point")
 let P2_point = document.getElementById("p2_point")
-let player1points = localStorage.getItem("player1_points")
-let player2points = localStorage.getItem("player2_points")
+let player1points = localStorage.getItem("player 1 points")
+let player2points = localStorage.getItem("player 2 points")
 let P1_finder = player1 + " - Word finder"
 let P1_writer = player1 + " - Word writer"
 let P2_finder = player2 + " - Word finder"
@@ -109,6 +109,6 @@ switch (c) {
         c -= 11
         break
 }
-localStorage.setItem("c", c);
 localStorage.setItem("a", a);
 localStorage.setItem("b", b);
+localStorage.setItem("c", c);

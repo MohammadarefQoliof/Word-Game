@@ -12,27 +12,20 @@ button.addEventListener("click", ()=>{
     player2.classList.remove("warn", "shakeAnimate")
     
     if(P1 == ""){
-        let warn_text = document.getElementById("text")
         player1.classList.add("warn", "shakeAnimate")
-        warn_text.innerHTML = "Inputs cannot be empty!"
     }else if(P2 == ""){
-        let warn_text = document.getElementById("text")
         player2.classList.add("warn", "shakeAnimate")
-        warn_text.innerHTML = "Inputs cannot be empty!"
     }else if(pointValue == ""){
-        let warn_text = document.getElementById("text")
         points.classList.add("warn", "shakeAnimate")
-        warn_text.innerHTML = "Inputs cannot be empty!"
     }else if(pointValue > 10){
-        let warn_text = document.getElementById("text")
         points.classList.add("warn", "shakeAnimate")
-        warn_text.innerHTML = "Points cannot be more than 10!"
+        alert("Points cannot be more than 10!")
     }
     else {
         P1 = P1[0].toUpperCase() + P1.slice(1).toLowerCase();
         P2 = P2[0].toUpperCase() + P2.slice(1).toLowerCase();
-        localStorage.setItem("player1", P1)
-        localStorage.setItem("player2", P2)
+        localStorage.setItem("player 1", P1)
+        localStorage.setItem("player 2", P2)
         localStorage.setItem("points", pointValue)
         window.location.href = "../HTML/broadcast.html"
     }

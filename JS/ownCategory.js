@@ -1,10 +1,14 @@
 let button = document.getElementById("submit_button")
-let category = document.getElementById("category")
 button.addEventListener("click", ()=>{
+    let category = document.getElementById("category")
+
+    category.classList.remove("warn", "shakeAnimate")
+    
     if(category.value != ""){
-        localStorage.setItem("category", category.value)
+        categoryValue = category.value.toLowerCase()
+        localStorage.setItem("category", categoryValue)
         window.location.href = "../HTML/play.html"
     }else{
-        alert("Category can't be empty")
+        category.classList.add("warn", "shakeAnimate")
     }
 })
