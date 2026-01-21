@@ -69,7 +69,7 @@ input{
     background-image: url("../IMAGES/regions.png");
 }
 #option6{
-    background-image: url("../IMAGES/villages.jpg");
+    background-image: url("../IMAGES/villages.png");
 }
 #option7{
     background-image: url("../IMAGES/names.webp");
@@ -81,17 +81,17 @@ input{
     background-image: url("../IMAGES/vegetables.png");
 }
 #option10{
-    background-image: url("../IMAGES/sports.jpg");
+    background-image: url("../IMAGES/sports.png");
 }
 #option11{
-    background-image: url("../IMAGES/vehicles.jpg");
+    background-image: url("../IMAGES/vehicles.png");
 }
 #option12{
     background-image: url("../IMAGES/music.png");
     font-size: 21px;
 }
 #option13{
-    background-image: url("../IMAGES/languages.jpg");
+    background-image: url("../IMAGES/languages.png");
 }
 #option14{
     background-image: url("../IMAGES/films.avif");
@@ -104,7 +104,7 @@ input{
     background-size: 60%;
 }
 #option17{
-    background-image: url("../IMAGES/elecrtronics.jpg");
+    background-image: url("../IMAGES/elecrtronics.png");
     color: white;
 }
 #option18{

@@ -5,7 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
-    background-image: url("../IMAGES/backgroundPhoto.jpg");
+    background-image: url("../IMAGES/backgroundPhoto.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,7 +15,7 @@ body{
     height: 100vh;
 }
 #main{
-    background-image: url("../IMAGES/minibackgroundPhoto.jpg");
+    background-image: url("../IMAGES/minibackgroundPhoto.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
