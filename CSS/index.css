@@ -5,13 +5,14 @@
     padding: 0;
 }
 body{
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
+    height: 100dvh;
     background-color: rgba(0, 0, 0, 0.95);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow-x: hidden;
+    gap: 20px;
 }
 .star{
     width: 100px;
@@ -20,10 +21,47 @@ body{
     background-color: #002B36;
     border-radius: 50%;
     background-size: cover;
+    border: 2px solid #005266;
 }
-h1{
+.title{
     font-size: 6rem;
     color: white;
     font-family: "Bungee", sans-serif;
     font-weight: 400;
+}
+.paragraph{
+    width: 500px;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: "DM sans", sans-serif;
+    color: #FFFFFFB3;
+}
+.startBtn{
+    width: 300px;
+    height: 70px;
+    background-color: #0DCCF2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "DM sans", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #000000;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0px 2px 20px rgba(13, 204, 242, 0.5);
+    gap: 10px;
+    margin-top: 20px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+.playIcon{
+    width: 30px;
+    height: 30px;
+    background: url("../assets/playIcon.png");
+    background-size: cover;
+}
+.startBtn:hover{
+    box-shadow: 0px 4px 20px rgba(13, 204, 242, 0.8);
+    transform: translateY(-10px);
 }
