@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WORD GAME</title>
-    <link rel="stylesheet" href="../CSS/nameInput.css">
-    <link rel="icon" href="../assets/wordGameIcon.png">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WORD GAME</title>
+        <link rel="stylesheet" href="../CSS/nameInput.css">
+        <link rel="icon" href="../assets/wordGameIcon.png">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    </head> 
+    <body>
+        <h1 class="topic">GAME SETUP</h1>
+        <div class="card">
+            <div class="player"><div class="p1icon"></div>PLAYER 1 NAME</div>
+            <input type="text" class="playerInput player1Input" placeholder="Player 1">
+            <div class="player"><div class="p2icon"></div>PLAYER 2 NAME</div>
+            <input type="text" class="playerInput player2Input" placeholder="Player 2">
+            <div class="rules">
+                <p class="ruleTitle">HP RULES</p>
+                <ul>
+                    <li>Each player starts with <span class="hpValue">100 HP</span>.</li>
+                    <li>The word writer sets a guess number. The word finder gets random <span class="hpValue">free guesses</span> (1–5) with no damage.</li>
+                    <li>Every paid guess costs <span class="hpValue">5 HP</span>. The game ends when someone hits 0!</li>
+                </ul>
+            </div>
+            <button class="btn">LET'S GO</button>
+        </div>
+
+        <script src="../JavaScript/nameInput.js"></script>
+    </body>
 </html>

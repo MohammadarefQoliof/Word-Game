@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    gap: 10px;
+}
+.topic{
+    font-size: 5rem;
+    color: white;
+    font-family: "Bungee", sans-serif;
+    font-weight: 400;
+    margin: 10px 0 0 0;
+}
+.card{
+    width: 50%;
+    height: 75vh;
+    border-radius: 20px;
+    border: 2px solid rgb(255 255 255 / 0.1);
+    padding: 20px;
+    background-color: rgba(20, 20, 20, 0.8);
+}
+.player{
+    font-size: 14px;
+    color: #FFFFFFB3;
+    font-family: "DM sans", sans-serif;
+    margin: 10px 0;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.p1icon{
+    width: 30px;
+    height: 30px;
+    background-image: url("../assets/player1.png");
+    background-size: cover;
+}
+.p2icon{
+    width: 30px;
+    height: 30px;
+    background-image: url("../assets/player2.png");
+    background-size: cover;
+}
+.playerInput{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(9, 9, 9);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 0 20px;
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    font-family: "DM sans", sans-serif;
+    transition: 0.3s;
+}
+.playerInput:focus{
+    outline: none;
+    border-color: #0DCCF2;
+}
+.btn{
+    width: 100%;
+    height: 70px;
+    background-color: #0DCCF2;
+    border-radius: 20px;
+    border: none;
+    font-family: "DM sans", sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 2px 15px rgba(13, 204, 242, 0.5);
+}
+.btn:hover{
+    box-shadow: 0px 4px 22px rgba(13, 204, 242, 0.7);
+    transform: translateY(-4px);
+}
+.rules{
+    width: 100%;
+    height: 35%;
+    margin: 0 0 20px 0;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #A655F61A;
+    color: #FFFFFFB3;
+    font-weight: 400;
+    font-family: "DM sans", sans-serif;
+    margin-top: 20px;
+}
+.ruleTitle{
+    color: #A655F6;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+ul{
+    list-style: none;
+}
+ul li{
+    margin: 6px 0;
+}
+.hpValue{
+    font-weight: 900;
+    color: white;
+}
