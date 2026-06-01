@@ -13,6 +13,7 @@ body{
     flex-direction: column;
     overflow-x: hidden;
     gap: 10px;
+    user-select: none;
 }
 .topic{
     font-size: 5rem;

@@ -13,6 +13,7 @@ body{
     flex-direction: column;
     overflow-x: hidden;
     gap: 20px;
+    user-select: none;
 }
 .mainSec{
     width: 100%;
