@@ -28,6 +28,24 @@
     font-weight: 900;
     font-size: 1rem;
 }
+.heartHp{
+    display: flex;
+    gap: 5px;
+}
+.heartBlue{
+    width: 20px;
+    height: 20px;
+    background-image: url("../../assets/blueHeart.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.pinkHeart{
+    width: 20px;
+    height: 20px;
+    background-image: url("../../assets/pinkHeart.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 .hp{
     font-size: 1rem;
     font-weight: 900;
@@ -54,7 +72,7 @@
 .cupIcon{
     width: 40px;
     height: 40px;
-    background-image: url("../assets/trophy.png");
+    background-image: url("../../assets/trophy.png");
     background-size: contain;
     background-repeat: no-repeat;
 }

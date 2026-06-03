@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 10px;
+    user-select: none;
+}
+.mainSec{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgb(255 255 255 / 0.1);
+    padding: 20px;
+    background-color: rgba(20, 20, 20, 0.8);
+    border-radius: 20px;
+    gap: 10px;
+}
+.keyboardBg{
+    width: 70px;
+    height: 70px;
+    background-color: #A655F633;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.keyboard{
+    width: 50px;
+    height: 50px;
+    background-image: url("../assets/keyboardIcon.png");
+    background-size: cover;
+}
+.cardTitle{
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: white;
+    font-family: "bungee", "archivo black", sans-serif;
+}
+.categoryTopicBg{
+    width: auto;
+    height: 30px;
+    color: #0DCCF2;
+    background-color: #0DCCF21A;
+    border: 2px solid #0DCCF233;
+    border-radius: 30px;
+    padding: 18px 20px;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: "DM sasns", "lato", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    color: #FFFFFF80;
+    font-family: "DM sans", "lato", sans-serif;
+    font-weight: 700;
+    margin: 10px 0 0 0;
+}
+.firstInput{
+    width: 100%;
+    height: 55px;
+    border-radius: 10px;
+    background-color: rgb(9, 9, 9);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    transition: 0.3s;
+    color: white;
+}
+.lightningIcon{
+    width: 20px;
+    height: 20px;
+    background-image: url("../assets/lightning.png");
+    background-size: cover;
+}
+.firstInput:focus{
+    outline: none;
+    border: 2px solid #0DCCF2;
+}
+.firstP{
+    margin: 0 0 7px 5px;
+    font-size: 16px;
+    display: flex;
+    gap: 5px;
+}
+.inputBottom1 p{
+    margin: 7px 0 0 5px;
+    font-size: 16px;
+}
+.inputBottom1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 8px;
+}
+.warningText{
+    width: 95%;
+    height: 40px;
+    background-color: rgb(12, 12, 12);
+    border-radius: 10px;
+    color: #FFFFFF99;
+    font-family: "DM sans", "lato", sans-serif;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 7px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.btn{
+    width: 100%;
+    height: 70px;
+    background-color: #0DCCF2;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "DM sans", sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 2px 15px rgba(13, 204, 242, 0.5);
+}
+.btn:hover{
+    box-shadow: 0px 4px 22px rgba(13, 204, 242, 0.7);
+    transform: translateY(-4px);
+}
+.errorDiv{
+    width: 400px;
+    height: 100px;
+    background-color: #ef4343;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 0 0 20px;
+}
+.errorH1{
+    color: white;
+    font-family: "DM sans", "lato", sans-serif;
+    font-size: 15px;
+}
+.errorP{
+    color: white;
+    font-family: "DM sans", "lato", sans-serif;
+    font-size: 15px;
+}
+.disabled{
+    background-color: #0dccf287;
+    cursor: not-allowed;
+}
+@keyframes appear {
+    from{
+        bottom: -100px;
+    }
+    to{
+        bottom: 10px;
+    }
+}
+@keyframes disappear {
+    from{
+        bottom: 10px;
+    }
+    to{
+        right: -400px;
+    }
+}

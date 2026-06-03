@@ -17,11 +17,12 @@ for(let i = 0; i < category.length; i++){
         console.log(categoryValue);
         
         if(categoryValue == "OTHERS"){
+            customCategory.value = ""
             card.style.height = "98%"
             customCategory.style.display = "block"
             customCategory.style.animation = "appear 0.4s forwards"
             btn.classList.add("btnNotWork")
-
+            
             
             customCategory.addEventListener("input", ()=>{
                 if(customCategory.value != ""){
@@ -30,20 +31,26 @@ for(let i = 0; i < category.length; i++){
                     btn.classList.add("btnNotWork")
                 }
             })
-            btn.addEventListener("click", ()=>{
-                if(customCategory.value != ""){
-                    localStorage.setItem("category", customCategory.value.toUpperCase())
-                    window.location.href = "../HTML/quizWord.html"
-                }
-            })
         }else{
             card.style.height = "85%"
             customCategory.style.animation = "disappear 0.4s forwards"
             btn.classList.remove("btnNotWork")
-            btn.addEventListener("click", ()=>{
-                localStorage.setItem("category", categoryValue)
-                window.location.href = "../HTML/quizWord.html"
-            })
+            customCategory.value = "UNDEFINED"
         }
     })
 }
+
+btn.addEventListener("click", ()=>{
+    if(customCategory.value != "" && customCategory.style.display == "block"){
+        localStorage.setItem("category", customCategory.value.toUpperCase())
+        window.location.href = "../HTML/quizWord.html"
+    }else if(customCategory.value == "" && customCategory.style.display == "block"){
+        customCategory.style.animation = "shake 0.4s forwards"
+        setTimeout(()=>{
+            customCategory.style.animation = "none"
+        }, 400)
+    }else{
+        localStorage.setItem("category", categoryValue)
+        window.location.href = "../HTML/quizWord.html"
+    }
+})
