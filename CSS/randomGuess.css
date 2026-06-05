@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     height: 100vh;
@@ -11,8 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    overflow-x: hidden;
-    gap: 20px;
+    gap: 10px;
     user-select: none;
 }
 .mainSec{
@@ -32,67 +31,52 @@ body{
     padding: 20px;
     background-color: rgba(20, 20, 20, 0.8);
     border-radius: 20px;
-    gap: 30px;
+    gap: 10px;
+}
+.giftBg{
+    width: 80px;
+    height: 80px;
+    background-color: #A655F633;
+    border: 2px solid #A655F68E;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.giftIcon{
+    width: 50px;
+    height: 50px;
+    background-image: url("../assets/giftIcon.png");
+    background-size: cover;
 }
 .cardTitle{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 100;
     color: white;
     font-family: "bungee", "archivo black", sans-serif;
 }
-.wordWriter{
-    width: 100%;
-    height: 110px;
+.giftGotPlayer{
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: white;
+    font-family: "DM sans", "Lato", sans-serif;
+    color: rgb(134, 230, 249);
+}
+.freeGuesses{
+    width: 150px;
+    height: 150px;
+    margin: 20px 0 0 0;
+    border-radius: 50%;
+    color: #A655F6;
+    border: 5px solid #a655f6ab;
+    box-shadow: 0px 10px 75px #A655F6;
+    animation: shadowing 1.5s ease-in-out infinite;
+    background-color: #00000099;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    border-radius: 10px;
-    background-color: rgb(9, 9, 9);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-}
-.wordWriterText{
-    font-weight: 900;
-    font-family: "DM Sans", sans-serif;
-    color: #FFFFFFB3;
-}
-.playerName{
-    font-family: "DM Sans", sans-serif;
-    font-size: 2.5rem;
-}
-.wordFinder{
-    width: 100%;
-    height: 110px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    border-radius: 10px;
-    background-color: rgb(9, 9, 9);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-}
-.arrow{
-    width: 40px;
-    height: 40px;
-    background-image: url("../assets/rightArrow.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.playerName2{
-    font-family: "DM Sans", sans-serif;
-    font-size: 2.5rem;
-}
-.paragraph{
-    font-size: 1.2rem;
-    color: white;
-    font-family: "DM Sans", sans-serif;
-    color: #FFFFFFB3;
-}
-.playerNameSpan{
-    color: white;
-    font-weight: 900;
+    font-size: 4rem;
+    font-family: "DM sans", "Lato", sans-serif;
 }
 .btn{
     width: 100%;
@@ -114,6 +98,41 @@ body{
     box-shadow: 0px 4px 22px rgba(13, 204, 242, 0.7);
     transform: translateY(-4px);
 }
-.btnPlayerName{
-    margin: 0 0 0 5px;
+.text{
+    font-size: 1rem;
+    margin: 10px 0;
+    text-align: center;
+    color: #FFFFFF99;
+    font-family: "DM sans", "Lato", sans-serif;
+    font-weight: 600;
+}
+.purpleColor{
+    color: #A655F6;
+}
+.whiteColor{
+    color: white;
+}
+.customColor{
+    color: #EF4343;
+}
+.guessNum{
+    animation: appear 1s ease forwards;
+}
+@keyframes shadowing {
+    0%, 100%{
+        box-shadow: 0px 0px 20px #a655f685;
+        text-shadow: 0px 0px 50px #a655f685;
+    }
+    50%{
+        box-shadow: 0px 0px 50px #a655f685;
+        text-shadow: 0px 0px 10px #a655f685;
+    }
+}
+@keyframes appear{
+    from{
+        transform: translateY(20px);
+    }
+    to{
+        transform: translateY(0);
+    }
 }

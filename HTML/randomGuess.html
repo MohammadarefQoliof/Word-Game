@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WORD GAME</title>
+        <link rel="stylesheet" href="../CSS/randomGuess.css">
+        <link rel="stylesheet" href="../CSS/extraCSS/headerSec.css">  
+        <link rel="icon" href="../assets/wordGameIcon.png">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="headerSec">
+            <div class="player1HPbar">
+                <div class="nameAndHP">
+                    <p class="player1"></p>
+                    <div class="heartHp">
+                        <div class="heartBlue"></div>
+                        <p class="hp">100</p>
+                    </div>
+                </div>
+                <div class="player1Overlay"></div>
+            </div>
+            <div class="vsText">
+                <div class="cupIcon"></div>
+                <p>VS</p>
+            </div>
+            <div class="player2HPbar">
+                <div class="nameAndHP">
+                    <p class="player2"></p>
+                    <div class="heartHp">
+                        <div class="pinkHeart"></div>
+                        <p class="hp2">100</p>
+                    </div>
+                </div>
+                <div class="player2Overlay"></div>
+            </div>
+        </div>
+        <div class="mainSec">
+            <div class="card">
+                <div class="giftBg">
+                    <div class="giftIcon"></div>
+                </div>
+                <div class="cardTitle">FREE GUESSES FOR</div>
+                <div class="giftGotPlayer"></div>
+                <div class="freeGuesses"></div>
+                <p class="text">These <span class="purpleColor">2 free guesses</span> cost <span class="whiteColor">0 HP</span>. After that, each guess costs <span class="customColor">5 HP</span> from the finder.</p>
+                <div class="btn">NEXT</div>
+            </div>
+        </div>
+
+        <script src="../JavaScript/extraJS/nameShowUp.js"></script>
+        <script src="../JavaScript/randomGuess.js"></script>
+        <script src="../JavaScript/extraJS/noCheating.js"></script>
+    </body>
+</html>
