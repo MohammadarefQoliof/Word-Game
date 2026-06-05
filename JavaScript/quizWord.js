@@ -57,8 +57,9 @@ btn.addEventListener("click", ()=>{
         flag = false;
     }
     if (flag) {
-        localStorage.setItem("quizWord", wordInput.value);
+        localStorage.setItem("quizWord", wordInput.value.toUpperCase());
         localStorage.setItem("guessNum", guessNumInput.value);
+        localStorage.setItem("leftLetters", wordInput.value.length)
         window.location.href = "../HTML/randomGuess.html";
     }
 });
