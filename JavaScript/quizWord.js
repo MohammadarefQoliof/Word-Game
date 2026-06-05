@@ -6,6 +6,15 @@ let letterNum = document.querySelector(".numOfLetters")
 let wordInput = document.querySelector(".wordInput");
 let guessNumInput = document.querySelector(".guessNumInput");
 let btn = document.querySelector(".btn");
+
+guessNumInput.addEventListener("input", ()=>{
+    if (guessNumInput.value < 0){
+        guessNumInput.value = 1
+    }else if(guessNumInput.value > 30){
+        guessNumInput.value = 30
+    }
+})
+
 if(wordInput.value == ""){
     btn.classList.add("disabled")
 }
@@ -48,7 +57,7 @@ btn.addEventListener("click", ()=>{
         flag = false;
     }
     if (flag) {
-        localStorage.setItem("word", wordInput.value);
+        localStorage.setItem("quizWord", wordInput.value);
         localStorage.setItem("guessNum", guessNumInput.value);
         window.location.href = "../HTML/randomGuess.html";
     }

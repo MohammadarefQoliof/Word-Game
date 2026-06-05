@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WORD GAME</title>
-        <link rel="stylesheet" href="../CSS/quizWord.css">
+        <link rel="stylesheet" href="../CSS/playing.css">
         <link rel="stylesheet" href="../CSS/extraCSS/headerSec.css">  
         <link rel="icon" href="../assets/wordGameIcon.png">
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -38,37 +38,37 @@
             </div>
         </div>
         <div class="mainSec">
-            <div class="card">
-                <div class="keyboardBg">
-                    <div class="keyboard"></div>
+            <div class="quizWordCard">
+                <div class="category"></div>
+                <div class="questionIcon"></div>
+                <div class="guessSec">
+                    <div class="freeGuesses"></div>
+                    <div class="guessesLeft"></div>
                 </div>
-                <h1 class="cardTitle">WRITE THE WORD</h1>
-                <div class="categoryTopicBg">
-                    <div class="categoryTopic">CATEGORY: <span class="categoryText"></span></div>
-                </div>
-                <div class="inputDiv">
-                    <p class="firstP">SECRET WORD (MAX 12 LETTERS)</p>
-                    <input type="password" placeholder="Type secret word here..." maxlength="12" class="firstInput wordInput">
-                    <div class="inputBottom1">
-                        <p>ONLY LETTERS</p>
-                        <p><span class="numOfLetters">0</span>/12</p>
+            </div>
+            <div class="guessingSec">
+                <div class="letterGuess">
+                    <div class="letterTopic topic">GUESS A LETTER</div>
+                    <div class="inputAndBtn">
+                        <input type="text" placeholder="A" maxlength="1" class="letterInput">
+                        <div class="btn">GUESS</div>
                     </div>
                 </div>
-                <div class="inputDiv">
-                    <div class="firstP"><div class="lightningIcon"></div>Guess Number (1–30) — each costs the finder 5 HP</div>
-                    <input type="number" placeholder="e.g. 5" class="firstInput guessNumInput" min="1" max="30" value="5">
+                <div class="wordGuess">
+                    <div class="topics">
+                        <div class="wordTopic topic">GUESS THE WORD</div>
+                        <div class="onlyChance">1 CHANCE!</div>
+                    </div>
+                    <div class="inputAndBtn">
+                        <input type="text" placeholder="Full Word..." maxlength="12" class="wordInput">
+                        <div class="btn wordBtn">SOLVE</div>
+                    </div>
                 </div>
-                <div class="warningText"><i>Make sure the Word Finder isn't looking! After confirming, pass the device to them.</i></div>
-                <div class="btn">LOCK IN WORD</div>
             </div>
         </div>
-        <div class="errorDiv">
-            <h1 class="errorH1">Invalid</h1>
-            <p class="errorP"></p>
-        </div>
 
-        <script src="../JavaScript/quizWord.js"></script>
-        <script src="../JavaScript/extraJS/noCheating.js"></script>
         <script src="../JavaScript/extraJS/nameShowUp.js"></script>
+        <script src="../JavaScript/extraJS/noCheating.js"></script>
+        <script src="../JavaScript/playing.js"></script>
     </body>
 </html>

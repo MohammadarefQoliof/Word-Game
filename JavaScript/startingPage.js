@@ -4,13 +4,13 @@ let name1 = wordFinder[0].toUpperCase() + wordFinder.slice(1).toLowerCase();
 let name2 = wordWriter[0].toUpperCase() + wordWriter.slice(1).toLowerCase();
 
 if (wordFinder == name1){
-    playerName1.style.color = localStorage.getItem(`${name2}Color`)
-    playerName2.style.color = localStorage.getItem(`${name1}Color`)
+    playerName1.style.color = localStorage.getItem(`player1Color`)
+    playerName2.style.color = localStorage.getItem(`player2Color`)
     playerName1.innerHTML = name1;
     playerName2.innerHTML = name2;
 }else{
-    playerName1.style.color = localStorage.getItem(`${name1}Color`)
-    playerName2.style.color = localStorage.getItem(`${name2}Color`)
+    playerName1.style.color = localStorage.getItem(`player2Color`)
+    playerName2.style.color = localStorage.getItem(`player1Color`)
     playerName1.innerHTML = name2;
     playerName2.innerHTML = name1;
 }

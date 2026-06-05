@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Comfortaa:wght@300..700&family=Dancing+Script:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    user-select: none;
+}
+.mainSec{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.quizWordCard{
+    width: 55%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid rgb(255 255 255 / 0.1);
+    background-color: rgba(20, 20, 20, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    gap: 10px;
+    margin: 15px 0 0 0;
+}
+.guessingSec{
+    width: 55%;
+    height: 40%;
+    display: flex;
+    gap: 20px;
+}
+.letterGuess, .wordGuess{
+    width: calc(100% - 20px);
+    height: 100%;
+    border: 2px solid rgb(255 255 255 / 0.1);
+    background-color: rgba(20, 20, 20, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+}
+.category{
+    width: auto;
+    height: 30px;
+    color: #0DCCF2;
+    background-color: #0DCCF21A;
+    border: 2px solid #0DCCF233;
+    border-radius: 30px;
+    padding: 18px 20px;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: "DM sasns", "lato", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.letters{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.letter{
+    width: 60px;
+    height: 90px;
+    background-color: #00000080;
+    color: #FFFFFF33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #4e4e4ece;
+    border-radius: 13px;
+    padding: 0 2px 0 0;
+}
+.questionMarkBg{
+    width: 40px;
+    height: 40px;
+    background-image: url("../assets/questionMarkIcon.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -9;
+}
+.freeGuesses{
+    width: 150px;
+    height: 40px;
+    background-color: #A655F633;
+    color: #A655F6;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7px;
+    align-items: center;
+    font-family: "DM sans", "Lato", sans-serif;
+    border-radius: 10px;
+    border: 2px solid #a655f689;
+    font-size: 14px;
+    font-weight: 600;
+}
+.guessSec{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.giftIcon{
+    width: 25px;
+    height: 25px;
+    background-image: url("../assets/giftIcon.png");
+    background-size: cover;
+}
+.guessesLeft{
+    width: 150px;
+    height: 40px;
+    background-color: #00000066;
+    color: #FFFFFFCC;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-family: "DM sans", "Lato", sans-serif;
+    border-radius: 10px;
+    border: 2px solid #b6b6b666;
+    font-weight: 600;
+}
+.lightningIcon{
+    width: 25px;
+    height: 25px;
+    background-image: url("../assets/whiteLightning.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.questionIcon{
+    width: 100px;
+    height: 100px;
+    background-image: url("../assets/questionIcon.png");
+    background-size: cover;
+    position: absolute;
+    right: 430px;
+    z-index: -10;
+}
+.topic{
+    font-family: "bungee";
+    font-size: 1.4rem;
+}
+.letterTopic{
+    color: #0DCCF2;
+}
+.wordTopic{
+    color: #F53D99;
+}
+.btn{
+    width: 100%;
+    height: 60px;
+    background-color: #0DCCF2;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "DM sans", sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover{
+    box-shadow: 0px 4px 22px rgba(13, 204, 242, 0.7);
+    transform: translateY(-4px);
+}
+.inputAndBtn{
+    display: flex;
+    gap: 10px;
+    margin: 20px 0 0 0;
+}
+.letterInput{
+    width: 20%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: rgb(9, 9, 9);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 0 20px;
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    font-family: "DM sans", sans-serif;
+    transition: 0.3s;
+}
+.wordInput{
+    width: 140%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: rgb(9, 9, 9);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 0 20px;
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    font-family: "DM sans", sans-serif;
+    transition: 0.3s;
+}
+.wordBtn{
+    background-color: #F53D99;
+    color: #FAFAFA;
+}
+.wordBtn:hover{
+    box-shadow: 0px 4px 22px #F53D99;
+}
+.topics{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.onlyChance{
+    color: #F53D99;
+    font-family: "DM sans";
+    background-color: #F53D9933;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}

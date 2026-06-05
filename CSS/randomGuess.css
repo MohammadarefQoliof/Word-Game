@@ -77,6 +77,7 @@ body{
     align-items: center;
     font-size: 4rem;
     font-family: "DM sans", "Lato", sans-serif;
+    animation: appearScale 0.5s ease forwards;
 }
 .btn{
     width: 100%;
@@ -93,6 +94,7 @@ body{
     cursor: pointer;
     transition: 0.3s;
     box-shadow: 0px 2px 15px rgba(13, 204, 242, 0.5);
+    animation: appear 1.2s ease-in-out forwards;
 }
 .btn:hover{
     box-shadow: 0px 4px 22px rgba(13, 204, 242, 0.7);
@@ -105,6 +107,7 @@ body{
     color: #FFFFFF99;
     font-family: "DM sans", "Lato", sans-serif;
     font-weight: 600;
+    animation: moveTop 1s ease-in-out forwards;
 }
 .purpleColor{
     color: #A655F6;
@@ -116,7 +119,7 @@ body{
     color: #EF4343;
 }
 .guessNum{
-    animation: appear 1s ease forwards;
+    animation: appear 1.2s ease forwards;
 }
 @keyframes shadowing {
     0%, 100%{
@@ -130,9 +133,25 @@ body{
 }
 @keyframes appear{
     from{
-        transform: translateY(20px);
+        transform: scale(0);
     }
     to{
-        transform: translateY(0);
+        transform: scale(1);
+    }
+}
+@keyframes appearScale {
+    from{
+        transform: scale(0.5);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+@keyframes moveTop {
+    from{
+        transform: translateY(50px);
+    }
+    to{
+        transform: translateY(0px);
     }
 }
