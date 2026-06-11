@@ -117,3 +117,44 @@ body{
 .btnPlayerName{
     margin: 0 0 0 5px;
 }
+.damageBg{
+    width: 180px;
+    height: 180px;
+    background-color: rgb(255, 63, 63);
+    border: 2px solid rgb(255, 143, 143);
+    box-shadow: 0 0 80px rgb(255, 63, 63);
+    border-radius: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.damageText{
+    font-family: "DM sans";
+    color: #FFFFFFB3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+.damageIcon{
+    width: 25px;
+    height: 25px;
+    background-image: url("../assets/swords.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.givenDamage{
+    font-size: 4rem;
+    font-family: "DM sans";
+    color: #FFFFFFB3;
+    font-weight: 900;
+}
+.hpText{
+    color: #FFFFFFB3;
+    font-family: "DM sans";
+    font-size: 1.3rem;
+    font-weight: 600;
+}
