@@ -10,8 +10,8 @@ let btn = document.querySelector(".btn");
 guessNumInput.addEventListener("input", ()=>{
     if (guessNumInput.value < 0){
         guessNumInput.value = 1
-    }else if(guessNumInput.value > 30){
-        guessNumInput.value = 30
+    }else if(guessNumInput.value > 20){
+        guessNumInput.value = 20
     }
 })
 

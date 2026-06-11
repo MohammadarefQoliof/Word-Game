@@ -21,6 +21,10 @@ playerNameSpan.innerHTML = name1;
 let btnPlayerName = document.querySelector(".btnPlayerName");
 btnPlayerName.innerHTML = name1;
 
+if(localStorage.getItem("animateDamage")){
+    let damageBg = document.createElement("div") //when the word is found make the damage animation!!!
+}
+
 let btn = document.querySelector(".btn");
 btn.addEventListener("click", function () {
     window.location.href = "../HTML/category.html";

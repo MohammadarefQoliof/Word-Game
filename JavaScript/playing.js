@@ -69,7 +69,7 @@ if (giftGuess == 0){
     damage.innerHTML = `<div class="heartIcon"></div> ${damagePend} HP pending`
     damage.style.display = "flex"
 }
-
+let usedLetters = []
 btn.addEventListener("click", ()=>{
     letterValue = letterInput.value
     let leftLetters = localStorage.getItem("leftLetters")
@@ -77,46 +77,50 @@ btn.addEventListener("click", ()=>{
     if (letterValue == ""){
         btn.classList.add("disabledLetter")
     }else{
-        btn.classList.remove("disabledLetter")
-        if (quizWord.includes(letterValue)){
-            for (let i = 0; i < quizWord.length; i++){
-                if (quizWord[i] == letterValue){
-                    let letterIndex = document.querySelector(`.letter${i+1}`)
-                    leftLetters -= 1
-                    localStorage.setItem("leftLetters", leftLetters)
-                    letterIndex.textContent = letterValue
-                    letterIndex.classList.add("found")
-                }
-            }
-        }else{
-            let giftGuess = localStorage.getItem("freeGuess")
-            let guessNum = localStorage.getItem("guessNum")
-            
-            if (giftGuess > 0){
-                giftGuess -= 1
-                localStorage.setItem("freeGuess", giftGuess)
-                freeGuessesText.innerHTML = `<div class="giftIcon"></div> ${giftGuess} Free Guesses`
-                if (giftGuess == 0){
-                    freeGuessesText.style.display = "none"
+        if (!usedLetters.includes(letterValue)){
+            btn.classList.remove("disabledLetter")
+            if (quizWord.includes(letterValue)){
+                for (let i = 0; i < quizWord.length; i++){
+                    if (quizWord[i] == letterValue){
+                        let letterIndex = document.querySelector(`.letter${i+1}`)
+                        leftLetters -= 1
+                        localStorage.setItem("leftLetters", leftLetters)
+                        letterIndex.textContent = letterValue
+                        letterIndex.classList.add("found")
+                    }
                 }
             }else{
-                guessNum -= 1
-                localStorage.setItem("guessNum", guessNum)
-                guessesText.innerHTML = `<div class="lightningIcon"></div> ${guessNum} Guesses Left`
-                if (guessNum == 0){
-                    console.log("lose"); // ------------------------------   
+                let giftGuess = localStorage.getItem("freeGuess")
+                let guessNum = localStorage.getItem("guessNum")
+                
+                if (giftGuess > 0){
+                    giftGuess -= 1
+                    localStorage.setItem("freeGuess", giftGuess)
+                    freeGuessesText.innerHTML = `<div class="giftIcon"></div> ${giftGuess} Free Guesses`
+                    if (giftGuess == 0){
+                        freeGuessesText.style.display = "none"
+                    }
+                }else{
+                    guessNum -= 1
+                    localStorage.setItem("guessNum", guessNum)
+                    guessesText.innerHTML = `<div class="lightningIcon"></div> ${guessNum} Guesses Left`
+                    let damagePend = Number(localStorage.getItem("damage")) || 0
+                    let damage = document.querySelector(".pendingDamage")
+                    damage.style.animation = "animateScale 0.4s ease forwards"
+                    setTimeout(() => {
+                        damage.style.animation = "none"
+                    }, 400);
+                    damagePend += 5
+                    localStorage.setItem("damage", damagePend)
+                    damage.style.display = "flex"
+                    damage.innerHTML = `<div class="heartIcon"></div> ${damagePend} HP pending`
+                    if (guessNum == 0){
+                        console.log("lose"); // ------------------------------   
+                    }
                 }
             }
+            usedLetters.push(letterValue)
         }
-    }
-    let giftGuess = localStorage.getItem("freeGuess")
-    if(giftGuess == 0){
-        let damagePend = Number(localStorage.getItem("damage")) || 0
-        let damage = document.querySelector(".pendingDamage")
-        damagePend += 5
-        localStorage.setItem("damage", damagePend)
-        damage.style.display = "flex"
-        damage.innerHTML = `<div class="heartIcon"></div> ${damagePend} HP pending`
     }
     btn.classList.add("disabledLetter")
     letterInput.value = ""
@@ -125,8 +129,13 @@ btn.addEventListener("click", ()=>{
     }
 })
 wordBtn.addEventListener("click", ()=>{
+    let player1 = localStorage.getItem("player1")
+    let player2 = localStorage.getItem("player2")
+    localStorage.setItem("player1", player2)
+    localStorage.setItem("player2", player1)
     if (quizWord == wordInput.value){
-        console.log("win"); // ---------------------------------------------
+        localStorage.setItem("animateDamage", true)
+        window.location.href = "../HTML/startingPage.html"
     }else{
         console.log("lose"); // ------------------------------------------------
     }

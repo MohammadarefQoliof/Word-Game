@@ -10,13 +10,14 @@ if (wordFinder == name1){
 }
 
 let freeGuesses = document.querySelector(".freeGuesses")
+let freeGuessNum = document.querySelector(".freeGuessNum")
 let randomGuess = Math.floor(Math.random() * 5) + 1
 freeGuesses.innerHTML = `<span class="guessNum">${randomGuess}</span>`
+freeGuessNum.innerHTML = randomGuess
 
 
 let btn = document.querySelector(".btn")
 btn.addEventListener("click", ()=>{
     localStorage.setItem("freeGuess", randomGuess)
-
     window.location.href = "../HTML/playing.html"
 })
