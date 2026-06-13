@@ -47,14 +47,13 @@ if(localStorage.getItem("animateDamage") == "true"){
             let wordWriterHp = Number(localStorage.getItem(`${wordWriterName.toUpperCase()}hp`))
             wordWriterHp -= Number(localStorage.getItem("damage"))
             localStorage.setItem(`${wordWriterName.toUpperCase()}hp`, wordWriterHp)
-            writeHp()
         }else{
             damageBg.style.animation = "giveDamageLeft 2.5s ease forwards"
             let wordFinderHp = Number(localStorage.getItem(`${wordFinderName.toUpperCase()}hp`))
             wordFinderHp -= Number(localStorage.getItem("damage"))
             localStorage.setItem(`${wordFinderName.toUpperCase()}hp`, wordFinderHp)
-            writeHp()
         }
+        writeHp()
         localStorage.setItem("wordFound", false)
     }else if(localStorage.getItem("wordNotFound") == "true"){
         if (wordWriterName == player2){
@@ -71,18 +70,20 @@ if(localStorage.getItem("animateDamage") == "true"){
         writeHp()
         localStorage.setItem("wordNotFound", false)
     }
+
     localStorage.setItem("animateDamage", false)
     localStorage.setItem("damage", 0)
     
     damageBg.append(damageText, givenDamage, hpText)
     body.append(damageBg)
 }
+if(localStorage.getItem(`${wordFinderName.toUpperCase()}hp`) == "0" || localStorage.getItem(`${wordWriterName.toUpperCase()}hp`) == "0"){
+    window.location.href = "../HTML/winPage.html"
+}
 
-let btn = document.querySelector(".btn");
-btn.addEventListener("click", function () {
-    window.location.href = "../HTML/category.html";
-});
-// if(!localStorage.getItem("animateDamage")){
-// }
-
-
+if(localStorage.getItem("animateDamage") == "false" || !localStorage.getItem("animateDamage")){
+    let btn = document.querySelector(".btn");
+    btn.addEventListener("click", function () {
+        window.location.href = "../HTML/category.html";
+    });
+}
