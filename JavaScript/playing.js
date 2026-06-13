@@ -115,7 +115,7 @@ btn.addEventListener("click", ()=>{
                     damage.style.display = "flex"
                     damage.innerHTML = `<div class="heartIcon"></div> ${damagePend} HP pending`
                     if (guessNum == 0){
-                        console.log("lose"); // ------------------------------   
+                        console.log("lose"); // ------------------------------
                     }
                 }
             }
@@ -133,10 +133,16 @@ wordBtn.addEventListener("click", ()=>{
     let player2 = localStorage.getItem("player2")
     localStorage.setItem("player1", player2)
     localStorage.setItem("player2", player1)
+    if (localStorage.getItem("damage") == 0 || localStorage.getItem("damage") == null){
+        localStorage.setItem("damage", "5")
+    }
     if (quizWord == wordInput.value){
         localStorage.setItem("animateDamage", true)
+        localStorage.setItem("wordFound", true)
         window.location.href = "../HTML/startingPage.html"
     }else{
-        console.log("lose"); // ------------------------------------------------
+        localStorage.setItem("animateDamage", true)
+        localStorage.setItem("wordNotFound", true)
+        window.location.href = "../HTML/startingPage.html"
     }
 })

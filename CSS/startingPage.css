@@ -129,6 +129,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.1s;
 }
 .damageText{
     font-family: "DM sans";
@@ -157,4 +158,32 @@ body{
     font-family: "DM sans";
     font-size: 1.3rem;
     font-weight: 600;
+}
+@keyframes giveDamageLeft {
+    0%, 25% {
+        transform: translate(0, 0) scale(0);
+    }
+    50%{
+        transform: translate(0, 0) scale(1);
+    }
+    75% {
+        transform: translate(-220px, -270px) scale(1);
+    }
+    100% {
+        transform: translate(-220px, -270px) scale(0);
+    }
+}
+@keyframes giveDamageRight {
+    0%, 25% {
+        transform: translate(0, 0) scale(0);
+    }
+    50%{
+        transform: translate(0, 0) scale(1);
+    }
+    75% {
+        transform: translate(220px, -270px) scale(1);
+    }
+    100% {
+        transform: translate(220px, -270px) scale(0);
+    }
 }

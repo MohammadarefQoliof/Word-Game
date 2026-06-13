@@ -1,7 +1,9 @@
 let giftGotPlayer = document.querySelector(".giftGotPlayer")
+let player1 = localStorage.getItem("player1")
+let player2 = localStorage.getItem("player2")
 let name1 = wordFinder[0].toUpperCase() + wordFinder.slice(1).toLowerCase();
 let name2 = wordWriter[0].toUpperCase() + wordWriter.slice(1).toLowerCase();
-if (wordFinder == name1){
+if (player1 == name2){
     giftGotPlayer.innerHTML = name1;
     giftGotPlayer.style.color = localStorage.getItem(`player1Color`)
 }else{

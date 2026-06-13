@@ -7,6 +7,8 @@ btn.addEventListener("click", () => {
 
     localStorage.setItem("player1", name1)
     localStorage.setItem("player2", name2)
+    localStorage.setItem(`${inputName1.toUpperCase()}hp`, "100")
+    localStorage.setItem(`${inputName2.toUpperCase()}hp`, "100")
     localStorage.setItem(`player1Color`, "rgb(109, 218, 255)")
     localStorage.setItem(`player2Color`, "#F53D99")
     defineRole();
