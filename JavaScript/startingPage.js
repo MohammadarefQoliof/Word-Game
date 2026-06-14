@@ -77,9 +77,16 @@ if(localStorage.getItem("animateDamage") == "true"){
     damageBg.append(damageText, givenDamage, hpText)
     body.append(damageBg)
 }
-if(localStorage.getItem(`${wordFinderName.toUpperCase()}hp`) == "0" || localStorage.getItem(`${wordWriterName.toUpperCase()}hp`) == "0"){
-    window.location.href = "../HTML/winPage.html"
-}
+setTimeout(() => {
+    if(localStorage.getItem(`${wordFinderName.toUpperCase()}hp`) <= "0" || localStorage.getItem(`${wordWriterName.toUpperCase()}hp`) <= "0"){
+        if(localStorage.getItem(`${wordFinderName.toUpperCase()}hp`) <="0"){
+            localStorage.setItem(`${wordFinderName.toUpperCase()}hp`, 0)
+        }else{
+            localStorage.setItem(`${wordWriterName.toUpperCase()}hp`, 0)
+        }
+        window.location.href = "../HTML/winPage.html"
+    }
+}, 3000);
 
 if(localStorage.getItem("animateDamage") == "false" || !localStorage.getItem("animateDamage")){
     let btn = document.querySelector(".btn");

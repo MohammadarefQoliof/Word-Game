@@ -265,13 +265,6 @@ body{
     border: 1px solid #ef434392;
     font-weight: 600;
 }
-.heartIcon{
-    width: 24px;
-    height: 24px;
-    background-image: url("../assets/redHeart.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 @keyframes animateScale {
     0%, 100%{
         transform: scale(1);

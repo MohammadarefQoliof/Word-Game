@@ -3,20 +3,22 @@ let wordFinderName = localStorage.getItem("wordFinder")
 let wordWriterName = localStorage.getItem("wordWriter")
 let hpBar1 = document.querySelector(".player1HPbar")
 let hpBar2 = document.querySelector(".player2HPbar")
+let pinkHeart = document.querySelector(".pinkHeart")
+let blueHeart = document.querySelector(".heartBlue")
+
 if(localStorage.getItem(`${wordFinderName.toUpperCase()}hp`) == "0"){
     hpBar1.classList.add("foundBar")
     hpBar2.classList.remove("foundBar")
     let winnerName = wordWriterName
     text.innerHTML = `${winnerName} WINS`
+    blueHeart.style.backgroundImage = "url('../assets/redHeart.png')"
 }else{
     hpBar2.classList.add("foundBar")
     hpBar1.classList.remove("foundBar")
     let winnerName = wordFinderName
     text.innerHTML = `${winnerName} WINS`
+    pinkHeart.style.backgroundImage = "url('../assets/redHeart.png')"
 }
-
-let redHeart = document.querySelector(".heartBlue")
-redHeart.style.backgroundImage = "url('../assets/redHeart.png')"
 
 let card = document.querySelector(".card");
 

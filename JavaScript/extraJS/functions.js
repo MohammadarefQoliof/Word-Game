@@ -20,6 +20,11 @@ function writeHp(){
         let wordWriter = localStorage.getItem("wordWriter");
         let hp1 = localStorage.getItem(`${wordFinder.toUpperCase()}hp`)
         let hp2 = localStorage.getItem(`${wordWriter.toUpperCase()}hp`)
+        if (hp1 < "0"){
+            hp1 = "0"
+        }else if(hp2 < "0"){
+            hp2 = "0"
+        }
         let overlay1 = document.querySelector(".player1Overlay")
         let overlay2 = document.querySelector(".player2Overlay")
         nameHp1.innerHTML = hp1
