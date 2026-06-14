@@ -51,6 +51,8 @@ btn.addEventListener("click", ()=>{
         }, 400)
     }else{
         localStorage.setItem("category", categoryValue)
-        window.location.href = "../HTML/quizWord.html"
+        if(localStorage.getItem("category") != "undefined"){
+            window.location.href = "../HTML/quizWord.html"
+        }
     }
 })

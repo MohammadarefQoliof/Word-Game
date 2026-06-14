@@ -116,3 +116,39 @@ ul li{
     font-weight: 900;
     color: white;
 }
+@media screen and (max-width: 768px) {
+    body{
+        justify-content: flex-start;
+        gap: 0;
+    }
+    .topic{
+        font-size: 3rem;
+    }
+    .card{
+        width: 90%;
+        height: 85vh;
+    }
+    .rules{
+        height: 43%;
+        font-size: 1rem;
+    }
+    .btn{
+        height: 60px;
+    }
+    ul li{
+        margin: 3px 0;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    body{
+        justify-content: flex-start;
+        gap: 0;
+    }
+    .topic{
+        font-size: 4rem;
+    }
+    .card{
+        width: 90%;
+        height: 82vh;
+    }
+}

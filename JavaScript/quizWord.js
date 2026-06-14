@@ -31,10 +31,12 @@ let flag = false;
 let errorP = document.querySelector(".errorP");
 let errorDiv = document.querySelector(".errorDiv");
 
+let vowels = ["ü", "ı", "ə", "ö", "ğ", "ç", "ş", "Ü", "I", "Ə", "Ö", "Ğ", "Ç", "Ş"]
+
 btn.addEventListener("click", ()=>{
     if (wordInput.value != "" && guessNumInput.value != "") {
         for (let i = 0; i < wordInput.value.length; i++) {
-            if (wordInput.value[i] >= "A" && wordInput.value[i] <= "Z" || wordInput.value[i] >= "a" && wordInput.value[i] <= "z") {
+            if ((wordInput.value[i] >= "A" && wordInput.value[i] <= "Z") || (wordInput.value[i] >= "a" && wordInput.value[i] <= "z") || vowels.includes(wordInput.value[i])) {
                 flag = true;
             }else{
                 errorP.innerText = "Only letters are allowed in the word";
