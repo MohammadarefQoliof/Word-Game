@@ -5,13 +5,13 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
     background-color: rgba(0, 0, 0, 0.95);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: 15px 0 0 0;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
     user-select: none;
 }
 .mainSec{
@@ -153,5 +153,52 @@ body{
     }
     to{
         transform: translateY(0px);
+    }
+}
+@media screen and (max-width: 700px) {
+    .card{
+        width: 90%;
+        height: 83vh;
+    }
+    .cardTitle{
+        font-size: 1.4rem;
+        gap: 5px;
+    }
+    .giftGotPlayer{
+        font-size: 2rem;
+    }
+    .giftBg{
+        width: 70px;
+        height: 70px;
+    }
+    .giftIcon{
+        width: 40px;
+        height: 40px;
+    }
+    .freeGuesses{
+        width: 130px;
+        height: 130px;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+    .card{
+        width: 70%;
+    }
+    .cardTitle{
+        font-size: 1.4rem;
+        gap: 5px;
+    }
+    .giftBg{
+        width: 70px;
+        height: 70px;
+    }
+    .giftIcon{
+        width: 40px;
+        height: 40px;
+    }
+    .freeGuesses{
+        width: 140px;
+        height: 140px;
+        margin: 0;
     }
 }

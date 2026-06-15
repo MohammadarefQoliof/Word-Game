@@ -33,6 +33,7 @@ body{
     border-radius: 20px;
     transition: 0.3s;
     gap: 20px;
+    margin: 0 0 10px 0;
 }
 .cardTitle{
     font-size: 2rem;

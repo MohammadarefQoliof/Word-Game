@@ -5,15 +5,15 @@
     box-sizing: border-box;
 }
 body{
-    height: 100vh;
     background-color: rgba(0, 0, 0, 0.95);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: 20px 0 0 0;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     user-select: none;
-    overflow: hidden;
+    overflow    : hidden;
 }
 .mainSec{
     width: 100%;
@@ -63,7 +63,7 @@ body{
     border: 2px solid #0DCCF233;
     border-radius: 30px;
     padding: 18px 20px;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 20px;
     font-family: "DM sasns", "lato", sans-serif;
     display: flex;
@@ -196,5 +196,61 @@ body{
     to{
         right: -400px;
         display: none;
+    }
+}
+@media screen and (max-width: 700px) {
+    .card{
+        width: 90%;
+        height: 82vh;
+        gap: 5px;
+    }
+    .cardTitle{
+        font-size: 1.7rem;
+    }
+    .categoryTopicBg{
+        font-size: 1rem;
+        padding: 15px;
+    }
+    .firstP{
+        font-size: 0.8rem;
+    }
+    .firstInput{
+        font-size: 1.3rem;
+    }
+    .inputBottom1 p{
+        font-size: 0.8rem;
+    }
+    .keyboardBg{
+        width: 65px;
+        height: 65px;
+        margin: 0 0 2px 0;
+    }
+}
+@media screen and (min-width: 701px) and (max-width: 1024px) {
+    .card{
+        width: 70%;
+        height: 82vh;
+        gap: 5px;
+    }
+    .cardTitle{
+        font-size: 2rem;
+    }
+    .categoryTopicBg{
+        font-size: 1rem;
+        padding: 15px;
+    }
+    .firstP{
+        font-size: 1rem;
+    }
+    .firstInput{
+        font-size: 1.3rem;
+    }
+    .inputBottom1 p{
+        font-size: 1rem;
+    }
+    .keyboardBg{
+        width: 65px;
+        height: 65px;
+        margin: 0 0 2px 0;
     }
 }

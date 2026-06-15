@@ -189,6 +189,17 @@ body{
     }
 }
 @media screen and (max-width: 600px) {
+    .damageBg{
+        width: 140px;
+        height: 140px;
+    }
+    .damageIcon{
+        width: 20px;
+        height: 20px;
+    }
+    .givenDamage{
+        font-size: 3rem;
+    }
     .card{
         width: 90%;
         gap: 15px;
@@ -203,8 +214,35 @@ body{
     .paragraph{
         font-size: 1.1rem;
     }
+    @keyframes giveDamageLeft {
+        0%, 25% {
+            transform: translate(0, 0) scale(0);
+        }
+        50%{
+            transform: translate(0, 0) scale(1);
+        }
+        75% {
+            transform: translate(-110px, -250px) scale(1);
+        }
+        100% {
+            transform: translate(-110px, -250px) scale(0);
+        }
+    }
+    @keyframes giveDamageRight {
+        0%, 25% {
+            transform: translate(0, 0) scale(0);
+        }
+        50%{
+            transform: translate(0, 0) scale(1);
+        }
+        75% {
+            transform: translate(110px, -250px) scale(1);
+        }
+        100% {
+            transform: translate(110px, -250px) scale(0);
+        }
+    }
 }
-
 @media screen and (min-width: 601px) and (max-width: 1024px) {
     .card{
         width: 74%;
