@@ -180,7 +180,7 @@ body{
         height: 130px;
     }
     body{
-        gap: 5px;
+        gap: 0px;
     }
 }
 @media screen and (min-width: 701px) and (max-width: 1024px) {
@@ -206,6 +206,6 @@ body{
         margin: 0;
     }
     body{
-        gap: 5px;
+        gap: 0px;
     }
 }

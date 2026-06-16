@@ -222,30 +222,30 @@ body{
     }
     @keyframes giveDamageLeft {
         0%, 25% {
-            transform: translate(0, 0) scale(0);
+            transform: translate(0, 230px) scale(0);
         }
         50%{
-            transform: translate(0, 0) scale(1);
+            transform: translate(0, 230px) scale(1);
         }
         75% {
-            transform: translate(-120px, -250px) scale(1);
+            transform: translate(-120px, -30px) scale(1);
         }
         100% {
-            transform: translate(-120px, -250px) scale(0);
+            transform: translate(-120px, -30px) scale(0);
         }
     }
-    @keyframes giveDamageRight {
+    @keyframes giveDamageLeft {
         0%, 25% {
-            transform: translate(0, 0) scale(0);
+            transform: translate(0, 230px) scale(0);
         }
         50%{
-            transform: translate(0, 0) scale(1);
+            transform: translate(0, 230px) scale(1);
         }
         75% {
-            transform: translate(120px, -250px) scale(1);
+            transform: translate(120px, -30px) scale(1);
         }
         100% {
-            transform: translate(120px, -250px) scale(0);
+            transform: translate(120px, -30px) scale(0);
         }
     }
 }
