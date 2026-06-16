@@ -278,7 +278,7 @@ body{
 }
 @media screen and (max-width: 365px) {
     body{
-        gap: 60px;
+        gap: 20px;
     }
     .quizWordCard{
         width: 90%;
@@ -348,7 +348,7 @@ body{
 }
 @media screen and (min-width: 366px) and (max-width: 768px) {
     body{
-        gap: 30px;
+        gap: 10px;
     }
     .quizWordCard{
         width: 90%;
@@ -425,12 +425,12 @@ body{
         height: auto;
     }
     .letter{
-        width: 40px;
-        height: 70px;
+        width: 55px;
+        height: 80px;
     }
     .questionMarkBg{
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
     }
     .wordTopic{
         font-size: 1.2rem;

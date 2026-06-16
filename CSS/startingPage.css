@@ -204,7 +204,7 @@ body{
         width: 90%;
         gap: 15px;
         padding: 10px;
-        height: 85%;
+        height: 88%;
     }
     .cardTitle{
         font-size: 2.3rem;
@@ -214,6 +214,11 @@ body{
     }
     .paragraph{
         font-size: 1.1rem;
+    }
+    body{
+        margin: 20px 0 0 0;
+        justify-content: flex-start;
+        gap: 0;
     }
     @keyframes giveDamageLeft {
         0%, 25% {

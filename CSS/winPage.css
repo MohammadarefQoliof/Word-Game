@@ -132,3 +132,19 @@ body{
     background-image: url("../assets/star.png");
     background-size: cover;
 }
+@media screen and (max-width: 700px) {
+    .card{
+        width: 90%;
+    }
+    .crownBg{
+        width: 90px;
+        height: 90px;
+    }
+    .crownIcon{
+        width: 70px;
+        height: 70px;
+    }
+    .gameOver{
+        font-size: 3rem;
+    }
+}

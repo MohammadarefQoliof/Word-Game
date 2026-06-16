@@ -158,7 +158,7 @@ body{
 @media screen and (max-width: 700px) {
     .card{
         width: 90%;
-        height: 76vh;
+        height: 73dvh;
     }
     .cardTitle{
         font-size: 1.4rem;
@@ -179,11 +179,14 @@ body{
         width: 130px;
         height: 130px;
     }
+    body{
+        gap: 5px;
+    }
 }
 @media screen and (min-width: 701px) and (max-width: 1024px) {
     .card{
         width: 70%;
-        height: 76vh;
+        height: 73dvh;
     }
     .cardTitle{
         font-size: 1.4rem;
@@ -201,5 +204,8 @@ body{
         width: 140px;
         height: 140px;
         margin: 0;
+    }
+    body{
+        gap: 5px;
     }
 }

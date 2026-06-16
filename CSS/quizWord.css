@@ -13,7 +13,7 @@ body{
     flex-direction: column;
     gap: 20px;
     user-select: none;
-    overflow    : hidden;
+    overflow: hidden;
 }
 .mainSec{
     width: 100%;
@@ -201,8 +201,12 @@ body{
 @media screen and (max-width: 700px) {
     .card{
         width: 90%;
-        height: 76vh;
+        height: 73dvh;
         gap: 5px;
+    }
+    .errorDiv{
+        width: 300px;
+        height: 100px;
     }
     .cardTitle{
         font-size: 1.7rem;
@@ -225,11 +229,14 @@ body{
         height: 65px;
         margin: 0 0 2px 0;
     }
+    body{
+        gap: 10px;
+    }
 }
 @media screen and (min-width: 701px) and (max-width: 1024px) {
     .card{
         width: 70%;
-        height: 76vh;
+        height: 73dvh;
         gap: 5px;
     }
     .cardTitle{
@@ -252,5 +259,8 @@ body{
         width: 65px;
         height: 65px;
         margin: 0 0 2px 0;
+    }
+    body{
+        gap: 10px;
     }
 }
