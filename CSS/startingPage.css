@@ -234,7 +234,7 @@ body{
             transform: translate(-120px, -30px) scale(0);
         }
     }
-    @keyframes giveDamageLeft {
+    @keyframes giveDamageRight {
         0%, 25% {
             transform: translate(0, 230px) scale(0);
         }
